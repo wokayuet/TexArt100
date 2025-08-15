@@ -92,24 +92,24 @@ public class FPSController : PortalTraveller {
             }
         }
 
-        float mX = Input.GetAxisRaw ("Mouse X");
-        float mY = Input.GetAxisRaw ("Mouse Y");
+        //float mX = Input.GetAxisRaw ("Mouse X");
+        //float mY = Input.GetAxisRaw ("Mouse Y");
 
-        // Verrrrrry gross hack to stop camera swinging down at start
-        float mMag = Mathf.Sqrt (mX * mX + mY * mY);
-        if (mMag > 5) {
-            mX = 0;
-            mY = 0;
-        }
+        //// Verrrrrry gross hack to stop camera swinging down at start
+        //float mMag = Mathf.Sqrt (mX * mX + mY * mY);
+        //if (mMag > 5) {
+        //    mX = 0;
+        //    mY = 0;
+        //}
 
-        yaw += mX * mouseSensitivity;
-        pitch -= mY * mouseSensitivity;
-        pitch = Mathf.Clamp (pitch, pitchMinMax.x, pitchMinMax.y);
-        smoothPitch = Mathf.SmoothDampAngle (smoothPitch, pitch, ref pitchSmoothV, rotationSmoothTime);
-        smoothYaw = Mathf.SmoothDampAngle (smoothYaw, yaw, ref yawSmoothV, rotationSmoothTime);
+        //yaw += mX * mouseSensitivity;
+        //pitch -= mY * mouseSensitivity;
+        //pitch = Mathf.Clamp (pitch, pitchMinMax.x, pitchMinMax.y);
+        //smoothPitch = Mathf.SmoothDampAngle (smoothPitch, pitch, ref pitchSmoothV, rotationSmoothTime);
+        //smoothYaw = Mathf.SmoothDampAngle (smoothYaw, yaw, ref yawSmoothV, rotationSmoothTime);
 
-        transform.eulerAngles = Vector3.up * smoothYaw;
-        //cam.transform.localEulerAngles = Vector3.right * smoothPitch;
+        //transform.eulerAngles = Vector3.up * smoothYaw;
+        ////cam.transform.localEulerAngles = Vector3.right * smoothPitch;
 
     }
 
