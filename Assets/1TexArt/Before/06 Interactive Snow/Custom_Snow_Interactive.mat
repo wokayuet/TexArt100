@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Custom_Snow_Interactive
+  m_Shader: {fileID: 4800000, guid: 621a385a5f032f34ab35d3710e0de9f6, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: d5a1c18c7228bc64cb41f9469d92a054, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: 2c7697064c9f56743a373ff43cf3f422, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 0999fac2c1f06f84ebb34fb12df31fe7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SparkleNoise:
+        m_Texture: {fileID: 2800000, guid: e182ac5d3b797044fb29f3fa2acc3708, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _MaxTessDistance: 45
+    - _NoiseScale: 0.21
+    - _NoiseWeight: 0.29
+    - _PathBlending: 0.81
+    - _RimPower: 1.4
+    - _SnowDepth: 0.33
+    - _SnowHeight: 0.29
+    - _SnowNormalStrength: 0
+    - _SnowTextureOpacity: 0.74
+    - _SnowTextureScale: 1.75
+    - _SparkCutoff: 0.62
+    - _SparkleScale: 1.3
+    - _Tess: 5
+    m_Colors:
+    - _Color: {r: 0.26415092, g: 0.21306513, b: 0.21306513, a: 1}
+    - _PathColorIn: {r: 0.19407989, g: 0.45581, b: 1.2468163, a: 1}
+    - _PathColorOut: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 0.12936097, g: 0.3473599, b: 0.4811321, a: 1}
+    - _ShadowColor: {r: 0.8867924, g: 0.36391956, b: 0.7189395, a: 1}
+  m_BuildTextureStacks: []
