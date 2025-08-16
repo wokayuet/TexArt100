@@ -54,20 +54,23 @@ public class Portal : MonoBehaviour
         {
             PortalTraveller traveller = trackedTravellers[i];
             Transform travellerT = traveller.transform;
+            // 计算“从当前门到对门”的变换矩阵 m
             var m = linkedPortal.transform.localToWorldMatrix * transform.worldToLocalMatrix * travellerT.localToWorldMatrix;
-
+            // 把物体中心到门中心的向量与门法线（transform.forward）做点积，取符号，得到在门法线正/负侧。
+            //若本帧与上一帧的符号不同，说明跨过了门平面。
+            //若跨越，则执行“真实传送”
             Vector3 offsetFromPortal = travellerT.position - transform.position;
-            int portalSide = System.Math.Sign(Vector3.Dot(offsetFromPortal, transform.forward));
-            int portalSideOld = System.Math.Sign(Vector3.Dot(traveller.previousOffsetFromPortal, transform.forward));
+            int portalSide = System.Math.Sign(Vector3.Dot(offsetFromPortal, screen.transform.forward));
+            int portalSideOld = System.Math.Sign(Vector3.Dot(traveller.previousOffsetFromPortal, screen.transform.forward));
             // Teleport the traveller if it has crossed from one side of the portal to the other
             if (portalSide != portalSideOld)
             {
                 var positionOld = travellerT.position;
                 var rotOld = travellerT.rotation;
                 traveller.Teleport(transform, linkedPortal.transform, m.GetColumn(3), m.rotation);
-                
+                // 把“克隆体”留在原位一帧，避免切换瞬间的视觉跳变/穿帮
                 traveller.graphicsClone.transform.SetPositionAndRotation(positionOld, rotOld);
-                
+                // 注册到对门的追踪列表中
                 // Can't rely on OnTriggerEnter/Exit to be called next frame since it depends on when FixedUpdate runs
                 linkedPortal.OnTravellerEnterPortal(traveller);
                 trackedTravellers.RemoveAt(i);
@@ -130,7 +133,7 @@ public class Portal : MonoBehaviour
         return screenThickness;
     }
 
-    #region 传送 & RT 创建（URP）
+    
     // 仅替换 RT 的创建方式，其他逻辑不变
     void CreateViewTextureURP()
     {
@@ -177,7 +180,7 @@ public class Portal : MonoBehaviour
             }
         }
     }
-
+    #region 传送 
     void OnTravellerEnterPortal(PortalTraveller traveller)
     {
         if (!trackedTravellers.Contains(traveller))
