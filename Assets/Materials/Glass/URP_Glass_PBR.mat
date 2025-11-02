@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: URP_Glass_PBR
+  m_Shader: {fileID: 4800000, guid: d67a9e1b79945b94b8f39acb0655a369, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 696fb87046f667f478943a19433243dd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CubeMap:
+        m_Texture: {fileID: 8900000, guid: c278b25d9908989409246cf1f8827a7a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrimeMap:
+        m_Texture: {fileID: 2800000, guid: 2c7697064c9f56743a373ff43cf3f422, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 0740b02d79d5adc41be44532d12820fc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: 1d7655150f8b45444ac63cc502f99a0b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BlurReflection: 0
+    - _BumpScale: 0.3
+    - _EmissiveIntensity: 1
+    - _FresnelStrength: 0.68
+    - _Glossiness: 0.5
+    - _GrimeIntensity: 0.458
+    - _GrimeSmoothnessLoss: 0.5
+    - _Metallic: 0.2
+    - _Opacity: 0.644
+    - _PowerFresnel: 0.52
+    - _ReflectionIntensity: -0.09
+    - _Refraction: 0.55
+    - _UseCubemap: 1
+    m_Colors:
+    - _ColorCubemap: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorFresnel: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _GrimeColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  m_BuildTextureStacks: []

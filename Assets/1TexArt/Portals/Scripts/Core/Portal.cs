@@ -60,8 +60,8 @@ public class Portal : MonoBehaviour
             //若本帧与上一帧的符号不同，说明跨过了门平面。
             //若跨越，则执行“真实传送”
             Vector3 offsetFromPortal = travellerT.position - transform.position;
-            int portalSide = System.Math.Sign(Vector3.Dot(offsetFromPortal, screen.transform.forward));
-            int portalSideOld = System.Math.Sign(Vector3.Dot(traveller.previousOffsetFromPortal, screen.transform.forward));
+            int portalSide = System.Math.Sign(Vector3.Dot(offsetFromPortal, transform.forward));
+            int portalSideOld = System.Math.Sign(Vector3.Dot(traveller.previousOffsetFromPortal, transform.forward));
             // Teleport the traveller if it has crossed from one side of the portal to the other
             if (portalSide != portalSideOld)
             {

@@ -150,8 +150,8 @@ public class FPSController : PortalTraveller
         float delta = Mathf.DeltaAngle(smoothYaw, eulerRot.y);
 
         // 同步 yaw，使相机参考方向与角色传送后的面向一致
-        yaw += delta;
-        smoothYaw += delta;
+        //yaw += delta;
+        //smoothYaw += delta;
 
         transform.eulerAngles = Vector3.up * eulerRot.y;
 
